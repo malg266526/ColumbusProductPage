@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         marginBottom: theme.spacing(4),
         justifyContent: 'space-around',
 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
         },
     },

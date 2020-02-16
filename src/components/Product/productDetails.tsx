@@ -49,7 +49,7 @@ const ProductDetailsComp: React.FC<IProps> = props => {
     return (
         <div>
             <Grid container className={classes.root}>
-                <Grid item xs={6} md={4}>
+                <Grid item xs={6} lg={4}>
                     <Typography variant="h2">
                         {product.newPrice} {product.currency}
                     </Typography>
@@ -57,7 +57,7 @@ const ProductDetailsComp: React.FC<IProps> = props => {
                         {product.oldPrice} {product.currency}
                     </Typography>
                 </Grid>
-                <Grid item xs={6} md={4}>
+                <Grid item xs={6} lg={4}>
                     <FormControl
                         variant="outlined"
                         className={classes.variantsSelect}
@@ -80,7 +80,7 @@ const ProductDetailsComp: React.FC<IProps> = props => {
                         </Select>
                     </FormControl>
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} lg={4}>
                     <Button
                         variant="outlined"
                         color="secondary"

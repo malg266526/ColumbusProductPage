@@ -3,12 +3,15 @@ import { Header } from './modules/header/Header';
 import { NavMenu } from './modules/navigation/Menu';
 import { Main } from './modules/main';
 import { Footer } from './modules/footer';
+import { Hidden } from '@material-ui/core';
 
 function App() {
     return (
         <div>
             <Header />
-            <NavMenu />
+            <Hidden smDown>
+                <NavMenu />
+            </Hidden>
             <Main />
             <Footer />
         </div>

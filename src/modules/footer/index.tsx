@@ -63,7 +63,7 @@ export const Footer: React.FC<IProps> = () => {
     return (
         <footer className={classes.root}>
             <Grid container>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} lg={6}>
                     <img src={logoImage} className={classes.logo} alt="logo" />
                     <Typography variant="h4" className={classes.desc}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -75,7 +75,7 @@ export const Footer: React.FC<IProps> = () => {
                         tellus mollis orci, sed rhoncus sapien nunc eget odio.
                     </Typography>
                 </Grid>
-                <Grid item xs={12} md={3} className={classes.list}>
+                <Grid item xs={12} lg={3} className={classes.list}>
                     <Typography variant="caption" className={classes.listTitle}>
                         Bestsellers
                     </Typography>
@@ -85,7 +85,7 @@ export const Footer: React.FC<IProps> = () => {
                                 key={idx}
                                 item
                                 xs={12}
-                                md={6}
+                                lg={6}
                                 className={classes.listItem}
                             >
                                 <Link href={'#'}>{elem}</Link>
@@ -93,7 +93,7 @@ export const Footer: React.FC<IProps> = () => {
                         ))}
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={3} className={classes.list}>
+                <Grid item xs={12} lg={3} className={classes.list}>
                     <Typography variant="caption" className={classes.listTitle}>
                         We're social!
                     </Typography>
