@@ -43,8 +43,13 @@ const theme = createMuiTheme({
         },
         h3: {
             fontFamily: 'Roboto',
-            fontWeight: FONT_WEIGHT.THIN,
+            fontWeight: FONT_WEIGHT.LIGHT,
             fontSize: FONT_SIZE.REGULAR,
+        },
+        h4: {
+            fontFamily: 'Roboto',
+            fontWeight: FONT_WEIGHT.THIN,
+            fontSize: FONT_SIZE.SMALL,
         },
         caption: {
             fontFamily: 'BebasNeue',
