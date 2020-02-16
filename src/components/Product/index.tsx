@@ -6,6 +6,7 @@ import { PhotosGallery } from '../PhotosGallery';
 import { inject, observer } from 'mobx-react';
 import { IProductStore } from '../../store/ProductsStore';
 import { ProductDetails } from './productDetails';
+import { ProductDesc } from './productDescription';
 
 interface IProps {
     productStore?: IProductStore;
@@ -46,13 +47,7 @@ const ProductComp: React.FC<IProps> = ({ productStore }) => {
                         currency={product.currency}
                     />
 
-                    <Typography
-                        variant="h3"
-                        dangerouslySetInnerHTML={{
-                            __html: product.description,
-                        }}
-                        className={classes.description}
-                    />
+                    <ProductDesc description={product.description} />
                 </Grid>
             </Grid>
         </section>
