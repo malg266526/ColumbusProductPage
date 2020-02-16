@@ -43,7 +43,7 @@ const ProductComp: React.FC<IProps> = ({ productStore }) => {
                     <ProductDetails product={product} />
                     <ProductDesc description={product.description} />
                 </Grid>
-                <Grid xs={12}>
+                <Grid item xs={12}>
                     <InspirationGallery />
                 </Grid>
             </Grid>

@@ -10,5 +10,5 @@ export const FONT_SIZE = {
     LARGE: 32,
     BIG: 24,
     REGULAR: 18,
-    SMALL: 12,
+    SMALL: 14,
 };

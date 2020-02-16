@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 const inspirations = [INSPIRATION_MOCK, INSPIRATION_MOCK, INSPIRATION_MOCK];
 
-export const InspirationGallery: React.FC<IProps> = ({}) => {
+export const InspirationGallery: React.FC<IProps> = () => {
     const classes = useStyles();
 
     return (

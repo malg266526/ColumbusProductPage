@@ -25,6 +25,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     oldPrice: {
         textDecoration: 'line-through',
     },
+    variantsSelect: {
+        minWidth: 50,
+
+        [theme.breakpoints.up('md')]: {
+            minWidth: 120,
+        },
+    },
 }));
 
 const ProductDetailsComp: React.FC<IProps> = props => {
@@ -51,7 +58,10 @@ const ProductDetailsComp: React.FC<IProps> = props => {
                     </Typography>
                 </Grid>
                 <Grid item xs={6} md={4}>
-                    <FormControl variant="outlined">
+                    <FormControl
+                        variant="outlined"
+                        className={classes.variantsSelect}
+                    >
                         <Select
                             native
                             value={currentVariant}
