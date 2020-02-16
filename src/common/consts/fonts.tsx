@@ -6,7 +6,7 @@ export const FONT_WEIGHT = {
 };
 
 export const FONT_SIZE = {
-    LARGE: 32,
+    LARGE: 46,
     BIG: 24,
     REGULAR: 18,
 };

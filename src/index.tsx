@@ -33,7 +33,6 @@ const theme = createMuiTheme({
             fontFamily: 'BebasNeue',
             fontWeight: FONT_WEIGHT.LIGHT,
             fontSize: FONT_SIZE.LARGE,
-            marginTop: 16,
             marginBottom: 16,
             paddingLeft: 16,
         },

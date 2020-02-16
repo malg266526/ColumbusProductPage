@@ -4,6 +4,7 @@ import { Hidden, Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { ProductList } from '../../components/ProductList';
 import { MODULE_SPACING } from '../../common/consts/styles';
+import { Product } from '../../components/Product';
 
 interface IProps {}
 
@@ -19,12 +20,12 @@ export const Main: React.FC<IProps> = () => {
         <section className={classes.root}>
             <Grid container>
                 <Hidden smDown>
-                    <Grid item xs={2}>
+                    <Grid item xs={3}>
                         <ProductList />
                     </Grid>
                 </Hidden>
-                <Grid item xs={12} md={10}>
-                    product
+                <Grid item xs={12} md={9}>
+                    <Product />
                 </Grid>
             </Grid>
         </section>
