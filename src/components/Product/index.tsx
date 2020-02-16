@@ -40,12 +40,7 @@ const ProductComp: React.FC<IProps> = ({ productStore }) => {
                 <Grid item xs={12} md={8} className={classes.details}>
                     <Typography variant="h1">{productName}</Typography>
 
-                    <ProductDetails
-                        newPrice={product.newPrice}
-                        oldPrice={product.oldPrice}
-                        variants={product.variants || []}
-                        currency={product.currency}
-                    />
+                    <ProductDetails product={product} />
 
                     <ProductDesc description={product.description} />
                 </Grid>

@@ -7,7 +7,7 @@ export interface IProduct {
     newPrice: number;
     oldPrice: number;
     currency: string;
-    variants?: string[];
+    variants: string[];
     description: string;
 }
 

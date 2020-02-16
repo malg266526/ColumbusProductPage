@@ -8,12 +8,13 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { IProduct } from '../../store/ProductsStore';
+import { inject, observer } from 'mobx-react';
+import { ICartStore } from '../../store/cartStore';
 
 interface IProps {
-    newPrice: number;
-    oldPrice: number;
-    variants: string[];
-    currency: string;
+    product: IProduct;
+    cartStore?: ICartStore;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -29,20 +30,27 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 }));
 
-export const ProductDetails: React.FC<IProps> = props => {
+const ProductDetailsComp: React.FC<IProps> = props => {
     const classes = useStyles();
-    const { newPrice, oldPrice, currency, variants } = props;
-    const [currentVariant, setCurrentVariant] = useState(variants[0]);
+    const { product } = props;
+    const [currentVariant, setCurrentVariant] = useState(product.variants[0]);
+
+    const addToCart = () => {
+        const { cartStore } = props;
+        if (cartStore) {
+            cartStore.addToCart(product);
+        }
+    };
 
     return (
         <div>
             <Grid container className={classes.root}>
                 <Grid item xs={6} md={4}>
                     <Typography variant="h2">
-                        {newPrice} {currency}
+                        {product.newPrice} {product.currency}
                     </Typography>
                     <Typography variant="caption" className={classes.oldPrice}>
-                        {oldPrice} {currency}
+                        {product.oldPrice} {product.currency}
                     </Typography>
                 </Grid>
                 <Grid item xs={6} md={4}>
@@ -59,8 +67,8 @@ export const ProductDetails: React.FC<IProps> = props => {
                                 setCurrentVariant(event.target.value as string)
                             }
                         >
-                            {variants &&
-                                variants.map(variant => (
+                            {product.variants &&
+                                product.variants.map(variant => (
                                     <option key={variant} value={variant}>
                                         {variant}
                                     </option>
@@ -69,7 +77,11 @@ export const ProductDetails: React.FC<IProps> = props => {
                     </FormControl>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                    <Button variant="outlined" color="secondary">
+                    <Button
+                        variant="outlined"
+                        color="secondary"
+                        onClick={() => addToCart()}
+                    >
                         Buy
                     </Button>
                 </Grid>
@@ -77,3 +89,5 @@ export const ProductDetails: React.FC<IProps> = props => {
         </div>
     );
 };
+
+export const ProductDetails = inject('cartStore')(observer(ProductDetailsComp));
