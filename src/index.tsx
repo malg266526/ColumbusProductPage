@@ -1,11 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-import * as serviceWorker from './serviceWorker'
-import { COLORS } from './common/consts/colors'
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core'
-import { FONT_SIZE, FONT_WEIGHT } from './common/consts/fonts'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import { COLORS } from './common/consts/colors';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
+import { FONT_SIZE, FONT_WEIGHT } from './common/consts/fonts';
+import { Provider } from 'mobx-react';
+import { cartStore } from './store/cartStore';
+import { productStore } from './store/ProductsStore';
 
 const theme = createMuiTheme({
     palette: {
@@ -13,7 +16,7 @@ const theme = createMuiTheme({
             main: COLORS.PINK,
         },
         secondary: {
-            main: COLORS.BLUE,
+            main: COLORS.GREEN,
         },
     },
     breakpoints: {
@@ -35,16 +38,23 @@ const theme = createMuiTheme({
             paddingLeft: 16,
         },
     },
-})
+});
+
+const stores = {
+    cartStore,
+    productStore,
+};
 
 ReactDOM.render(
     <MuiThemeProvider theme={theme}>
-        <App />
+        <Provider {...stores}>
+            <App />
+        </Provider>
     </MuiThemeProvider>,
     document.getElementById('root')
-)
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister()
+serviceWorker.unregister();
