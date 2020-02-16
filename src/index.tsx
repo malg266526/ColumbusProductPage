@@ -33,14 +33,13 @@ const theme = createMuiTheme({
         h1: {
             fontFamily: 'BebasNeue',
             fontWeight: FONT_WEIGHT.LIGHT,
-            fontSize: FONT_SIZE.LARGE,
+            fontSize: FONT_SIZE.XLARGE,
             marginBottom: 16,
         },
         h2: {
             fontFamily: 'BebasNeue',
             fontWeight: FONT_WEIGHT.BOLD,
-            fontSize: FONT_SIZE.BIG,
-            marginBottom: 8,
+            fontSize: FONT_SIZE.LARGE,
         },
         h3: {
             fontFamily: 'Roboto',
