@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0230f389.chunk.css",
+    "main.js": "/static/js/main.82013554.chunk.js",
+    "main.js.map": "/static/js/main.82013554.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f57fbd47.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f57fbd47.js.map",
+    "static/css/2.47271137.chunk.css": "/static/css/2.47271137.chunk.css",
+    "static/js/2.7ab77220.chunk.js": "/static/js/2.7ab77220.chunk.js",
+    "static/js/2.7ab77220.chunk.js.map": "/static/js/2.7ab77220.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6c250ebcd9e5e96e1e479252ec33bff0.js": "/precache-manifest.6c250ebcd9e5e96e1e479252ec33bff0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.47271137.chunk.css.map": "/static/css/2.47271137.chunk.css.map",
+    "static/css/main.0230f389.chunk.css.map": "/static/css/main.0230f389.chunk.css.map",
+    "static/js/2.7ab77220.chunk.js.LICENSE.txt": "/static/js/2.7ab77220.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/roboto-latin-900italic.ebf6d164.woff2",
+    "static/media/OfficeSupplies.png": "/static/media/OfficeSupplies.46e30d1a.png",
+    "static/media/paper1.jpg": "/static/media/paper1.3d3fd10d.jpg",
+    "static/media/paper2.jpg": "/static/media/paper2.6eb5b150.jpg",
+    "static/media/paper3.jpg": "/static/media/paper3.689df2a3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f57fbd47.js",
+    "static/css/2.47271137.chunk.css",
+    "static/js/2.7ab77220.chunk.js",
+    "static/css/main.0230f389.chunk.css",
+    "static/js/main.82013554.chunk.js"
+  ]
+}
