@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Hidden, Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { COLORS } from '../../common/consts/colors';
 import logoImage from '../../assets/OfficeSupplies.png';
 import { ProductSearch } from '../../components/ProductSearch';
 import { ShoppingCartInfo } from '../../components/ShoppingCartInfo';
@@ -13,7 +12,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     root: {
         display: 'flex',
         height: 100,
-        backgroundColor: COLORS.GREEN,
         alignItems: 'center',
         padding: theme.spacing(),
     },

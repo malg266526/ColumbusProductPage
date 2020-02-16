@@ -41,7 +41,7 @@ const ShoppingCartInfoComp: React.FC<IProps> = ({ cartStore }) => {
 
     return (
         <div className={classes.root}>
-            <ShoppingCartIcon className={classes.cartIcon} />
+            <ShoppingCartIcon className={classes.cartIcon} color="secondary" />
             <div className={classes.totalCount}>{totalCount} st</div>
             <div className={classes.totalCost}>
                 {totalPrice} {currency}
