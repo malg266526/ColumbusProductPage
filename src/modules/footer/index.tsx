@@ -6,8 +6,7 @@ import logoImage from '../../assets/OfficeSupplies.png';
 import facebookIcon from '../../assets/facebook.png';
 import twitterIcon from '../../assets/twitter.png';
 import linkedinIcon from '../../assets/linkedin.png';
-
-import { MODULE_SPACING } from '../../common/consts/styles';
+import { MODULE_SM_SPACING, MODULE_SPACING } from '../../common/consts/styles';
 import { FONT_WEIGHT } from '../../common/consts/fonts';
 
 interface IProps {}
@@ -22,6 +21,11 @@ const useStyles = makeStyles((theme: Theme) => ({
         paddingBottom: theme.spacing(4),
         paddingLeft: theme.spacing(MODULE_SPACING),
         paddingRight: theme.spacing(MODULE_SPACING),
+
+        [theme.breakpoints.down('md')]: {
+            paddingLeft: theme.spacing(MODULE_SM_SPACING),
+            paddingRight: theme.spacing(MODULE_SM_SPACING),
+        },
     },
     logo: {
         height: 40,
@@ -36,13 +40,28 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     listItem: {
         textAlign: 'center',
+
+        [theme.breakpoints.down('md')]: {
+            textAlign: 'left',
+        },
     },
     list: {
         textAlign: 'center',
+        marginTop: 2,
+
+        [theme.breakpoints.down('md')]: {
+            textAlign: 'left',
+            marginTop: theme.spacing(2),
+        },
     },
     links: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+
+        [theme.breakpoints.down('md')]: {
+            alignItems: 'flex-start',
+        },
     },
     link: {
         display: 'flex',

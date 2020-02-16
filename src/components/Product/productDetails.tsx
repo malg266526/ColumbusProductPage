@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import { IProduct } from '../../store/ProductsStore';
 import { inject, observer } from 'mobx-react';
 import { ICartStore } from '../../store/cartStore';
+import { MODULE_SM_SPACING } from '../../common/consts/styles';
 
 interface IProps {
     product: IProduct;
@@ -21,15 +22,29 @@ const useStyles = makeStyles((theme: Theme) => ({
     root: {
         display: 'flex',
         alignItems: 'center',
+        paddingBottom: 0,
+
+        [theme.breakpoints.down('md')]: {
+            paddingBottom: theme.spacing(MODULE_SM_SPACING),
+        },
     },
     oldPrice: {
         textDecoration: 'line-through',
     },
     variantsSelect: {
         minWidth: 50,
+        width: '100%',
 
         [theme.breakpoints.up('md')]: {
             minWidth: 120,
+            width: 'initial',
+        },
+    },
+    button: {
+        width: 'initial',
+
+        [theme.breakpoints.down('md')]: {
+            minWidth: '100%',
         },
     },
 }));
@@ -85,6 +100,7 @@ const ProductDetailsComp: React.FC<IProps> = props => {
                         variant="outlined"
                         color="secondary"
                         onClick={() => addToCart()}
+                        className={classes.button}
                     >
                         Buy
                     </Button>

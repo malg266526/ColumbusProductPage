@@ -1,7 +1,10 @@
 import React from 'react';
 import { Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { INSPIRATION_MOCK } from '../../mocks/inspirations';
+import {
+    INSPIRATION_MOCK,
+    INSPIRATION_MOCK_LONG,
+} from '../../mocks/inspirations';
 import { Inspiration } from './Inspiration';
 
 export interface IInspiration {
@@ -21,11 +24,16 @@ const useStyles = makeStyles((theme: Theme) => ({
 
         [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
+            alignItems: 'center',
         },
     },
 }));
 
-const inspirations = [INSPIRATION_MOCK, INSPIRATION_MOCK, INSPIRATION_MOCK];
+const inspirations = [
+    INSPIRATION_MOCK,
+    INSPIRATION_MOCK_LONG,
+    INSPIRATION_MOCK,
+];
 
 export const InspirationGallery: React.FC<IProps> = () => {
     const classes = useStyles();

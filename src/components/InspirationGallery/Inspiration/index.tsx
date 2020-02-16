@@ -17,6 +17,16 @@ const useStyles = makeStyles((theme: Theme) => ({
         backgroundImage: `url(${paper1})`,
         backgroundSize: '100% 100%',
         backgroundRepeat: 'no-repeat',
+        marginBottom: 0,
+        overflow: 'scroll',
+        maxHeight: 300,
+        boxSizing: 'border-box',
+
+        [theme.breakpoints.down('md')]: {
+            height: '100%',
+            maxHeight: '100%',
+            marginBottom: theme.spacing(2),
+        },
     },
     title: {
         color: theme.palette.secondary.main,
