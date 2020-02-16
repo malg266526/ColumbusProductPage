@@ -7,6 +7,7 @@ import { inject, observer } from 'mobx-react';
 import { IProductStore } from '../../store/ProductsStore';
 import { ProductDetails } from './productDetails';
 import { ProductDesc } from './productDescription';
+import { InspirationGallery } from '../InspirationGallery';
 
 interface IProps {
     productStore?: IProductStore;
@@ -39,10 +40,11 @@ const ProductComp: React.FC<IProps> = ({ productStore }) => {
                 </Grid>
                 <Grid item xs={12} md={8} className={classes.details}>
                     <Typography variant="h1">{productName}</Typography>
-
                     <ProductDetails product={product} />
-
                     <ProductDesc description={product.description} />
+                </Grid>
+                <Grid xs={12}>
+                    <InspirationGallery />
                 </Grid>
             </Grid>
         </section>
