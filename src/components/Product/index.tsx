@@ -41,14 +41,16 @@ const ProductComp: React.FC<IProps> = ({ productStore }) => {
 
     return (
         <section>
-            <Grid container>
+            <Grid container className={'h-product'}>
                 <Hidden mdDown>
                     <Grid item xs={12} lg={4}>
                         <PhotosGallery productName={productName} />
                     </Grid>
                 </Hidden>
                 <Grid item xs={12} lg={8} className={classes.details}>
-                    <Typography variant="h1">{productName}</Typography>
+                    <Typography variant="h1" className={'p-name'}>
+                        {productName}
+                    </Typography>
                     <ProductDetails product={product} />
                     <Hidden lgUp>
                         <Grid item xs={12}>

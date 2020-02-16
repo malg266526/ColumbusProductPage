@@ -40,7 +40,7 @@ export const Inspiration: React.FC<IProps> = ({ title, content }) => {
     const classes = useStyles();
 
     return (
-        <Card variant="outlined" className={classes.card}>
+        <Card variant="outlined" className={`${classes.card} h-card'`}>
             <CardContent>
                 <Typography variant="h1" className={classes.title}>
                     {title}

@@ -33,7 +33,7 @@ export const ProductDesc: React.FC<IProps> = props => {
                 dangerouslySetInnerHTML={{
                     __html: description,
                 }}
-                className={`${classes.description} ${
+                className={`${classes.description} e-description ${
                     expanded ? classes.expanded : ''
                 }`}
             />

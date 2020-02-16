@@ -65,7 +65,7 @@ const ProductDetailsComp: React.FC<IProps> = props => {
         <div>
             <Grid container className={classes.root}>
                 <Grid item xs={6} lg={4}>
-                    <Typography variant="h2">
+                    <Typography variant="h2" className={'p-price'}>
                         {product.newPrice} {product.currency}
                     </Typography>
                     <Typography variant="caption" className={classes.oldPrice}>

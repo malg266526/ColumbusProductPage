@@ -40,7 +40,7 @@ export const PhotosGallery: React.FC<IProps> = ({ productName }) => {
         <section>
             <img
                 src={selectedPhoto}
-                className={classes.mainPhoto}
+                className={`${classes.mainPhoto} u-photo`}
                 alt={productName}
             />
             <div className={classes.smallPhotos}>
@@ -50,7 +50,7 @@ export const PhotosGallery: React.FC<IProps> = ({ productName }) => {
                             src={photo}
                             key={photo}
                             style={{ width: `${smallPhotoWidth}` }}
-                            className={classes.smallPhoto}
+                            className={`${classes.smallPhoto} u-photo`}
                             alt={productName}
                             onClick={() => setSelectedPhoto(photo)}
                         />
