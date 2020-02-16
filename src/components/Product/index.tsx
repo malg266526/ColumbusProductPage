@@ -3,28 +3,60 @@ import Grid from '@material-ui/core/Grid';
 import { Theme, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { PhotosGallery } from '../PhotosGallery';
+import { inject, observer } from 'mobx-react';
+import { IProductStore } from '../../store/ProductsStore';
+import { ProductDetails } from './productDetails';
 
-interface IProps {}
+interface IProps {
+    productStore?: IProductStore;
+}
 
 const useStyles = makeStyles((theme: Theme) => ({
-    root: {},
+    details: {
+        paddingLeft: theme.spacing(2),
+    },
+    description: {
+        marginTop: theme.spacing(2),
+    },
 }));
 
-export const Product: React.FC<IProps> = () => {
+const ProductComp: React.FC<IProps> = ({ productStore }) => {
     const classes = useStyles();
 
-    const productName = 'Paper';
+    if (!(productStore && productStore.currentProduct)) {
+        return <Typography variant="h1">No product selected</Typography>;
+    }
+
+    const product = productStore.currentProduct;
+    const productName = product.name;
 
     return (
-        <section className={classes.root}>
+        <section>
             <Grid container>
                 <Grid item xs={12} md={4}>
                     <PhotosGallery productName={productName} />
                 </Grid>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={8} className={classes.details}>
                     <Typography variant="h1">{productName}</Typography>
+
+                    <ProductDetails
+                        newPrice={product.newPrice}
+                        oldPrice={product.oldPrice}
+                        variants={product.variants || []}
+                        currency={product.currency}
+                    />
+
+                    <Typography
+                        variant="h3"
+                        dangerouslySetInnerHTML={{
+                            __html: product.description,
+                        }}
+                        className={classes.description}
+                    />
                 </Grid>
             </Grid>
         </section>
     );
 };
+
+export const Product = inject('productStore')(observer(ProductComp));

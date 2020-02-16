@@ -9,6 +9,7 @@ import { FONT_SIZE, FONT_WEIGHT } from './common/consts/fonts';
 import { Provider } from 'mobx-react';
 import { cartStore } from './store/cartStore';
 import { productStore } from './store/ProductsStore';
+import 'typeface-roboto';
 
 const theme = createMuiTheme({
     palette: {
@@ -34,7 +35,22 @@ const theme = createMuiTheme({
             fontWeight: FONT_WEIGHT.LIGHT,
             fontSize: FONT_SIZE.LARGE,
             marginBottom: 16,
-            paddingLeft: 16,
+        },
+        h2: {
+            fontFamily: 'BebasNeue',
+            fontWeight: FONT_WEIGHT.BOLD,
+            fontSize: FONT_SIZE.BIG,
+            marginBottom: 8,
+        },
+        h3: {
+            fontFamily: 'Roboto',
+            fontWeight: FONT_WEIGHT.THIN,
+            fontSize: FONT_SIZE.REGULAR,
+        },
+        caption: {
+            fontFamily: 'BebasNeue',
+            fontWeight: FONT_WEIGHT.LIGHT,
+            fontSize: FONT_SIZE.REGULAR,
         },
     },
 });

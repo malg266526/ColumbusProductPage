@@ -31,7 +31,7 @@ export const ProductList: React.FC<IProps> = () => {
     return (
         <aside className={classes.root}>
             {products.map(product => (
-                <Link key={product.name} href={'#'} className={classes.link}>
+                <Link key={product.id} href={'#'} className={classes.link}>
                     {product.name}
                 </Link>
             ))}

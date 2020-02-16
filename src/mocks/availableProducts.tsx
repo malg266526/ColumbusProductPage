@@ -1,18 +1,24 @@
-export const CURRENT_PRODUCT = {
-    name: 'Paper',
-    newPrice: 565,
-    oldPrice: 670,
-    currency: 'kr',
-    variants: ['red', 'blue', 'yellow'],
-};
+const PRODUCT_DESCRIPTION = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+    Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.  
+    Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+    Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.   
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  <br>  <br> 
+    Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.  
+    Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+    Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. <br>  <br> 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
+    Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.  
+    Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  
+    Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.`;
 
-export const PRODUCTS = [
+const PRODUCTS_MOCK = [
     {
         name: 'Paper clips',
         newPrice: 565,
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Post-it notes',
@@ -20,6 +26,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Staples',
@@ -27,6 +34,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Writing utensils',
@@ -34,6 +42,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Hole punches',
@@ -41,6 +50,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Binders',
@@ -48,6 +58,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Staplers',
@@ -55,6 +66,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Computers',
@@ -62,6 +74,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Laminators',
@@ -69,6 +82,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Printers',
@@ -76,6 +90,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Paper',
@@ -83,6 +98,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Fax machines',
@@ -90,6 +106,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Photocopiers',
@@ -97,6 +114,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Cash registers',
@@ -104,6 +122,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Office furniture',
@@ -111,6 +130,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Cubicles',
@@ -118,6 +138,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Filing cabinet\n',
@@ -125,6 +146,7 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
     {
         name: 'Armoire desks',
@@ -132,5 +154,14 @@ export const PRODUCTS = [
         oldPrice: 670,
         currency: 'kr',
         variants: ['red', 'blue', 'yellow'],
+        description: PRODUCT_DESCRIPTION,
     },
 ];
+
+export const PRODUCTS = PRODUCTS_MOCK.map(product => ({
+    ...product,
+    id: Math.random(),
+}));
+
+export const CURRENT_PRODUCT =
+    PRODUCTS.find(product => (product.name = 'Paper')) || PRODUCTS[0];

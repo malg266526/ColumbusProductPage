@@ -1,6 +1,6 @@
-import React from 'react'
-import { Theme, Button, TextField } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
+import React from 'react';
+import { Button, TextField, Theme } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 interface IProps {}
 
@@ -14,10 +14,10 @@ const useStyles = makeStyles((theme: Theme) => ({
     input: {
         marginRight: theme.spacing(2),
     },
-}))
+}));
 
 export const ProductSearch: React.FC<IProps> = () => {
-    const classes = useStyles()
+    const classes = useStyles();
     return (
         <div className={classes.root}>
             <TextField
@@ -29,9 +29,9 @@ export const ProductSearch: React.FC<IProps> = () => {
                 margin="dense"
                 variant="outlined"
             />
-            <Button type="submit" variant="contained" color="primary">
+            <Button variant="contained" color="primary">
                 Search
             </Button>
         </div>
-    )
-}
+    );
+};

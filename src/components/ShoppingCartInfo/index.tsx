@@ -53,7 +53,7 @@ const ShoppingCartInfoComp: React.FC<IProps> = ({ cartStore }) => {
             <div className={classes.totalCost}>
                 {totalPrice} {currency}
             </div>
-            <Button type="submit" variant="contained" color="secondary">
+            <Button variant="contained" color="secondary">
                 Check out
             </Button>
         </div>
