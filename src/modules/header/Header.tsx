@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import logoImage from '../../assets/OfficeSupplies.png';
 import { ProductSearch } from '../../components/ProductSearch';
 import { ShoppingCartInfo } from '../../components/ShoppingCartInfo';
+import { MODULE_SPACING } from '../../common/consts/styles';
 
 interface IProps {}
 
@@ -13,7 +14,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         display: 'flex',
         height: 100,
         alignItems: 'center',
-        padding: theme.spacing(),
+        paddingTop: theme.spacing(),
+        paddingBottom: theme.spacing(),
+        paddingLeft: theme.spacing(MODULE_SPACING),
+        paddingRight: theme.spacing(MODULE_SPACING),
     },
     logo: {
         height: 70,

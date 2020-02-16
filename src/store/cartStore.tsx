@@ -4,7 +4,7 @@ import { CURRENT_PRODUCT } from '../mocks/availableProducts';
 
 export interface ICartStore {
     productsInCart: IProduct[];
-    currency: String;
+    currency: string;
 }
 
 class CartStore implements ICartStore {

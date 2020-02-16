@@ -13,10 +13,10 @@ import { productStore } from './store/ProductsStore';
 const theme = createMuiTheme({
     palette: {
         primary: {
-            main: COLORS.PINK,
+            main: COLORS.GREEN,
         },
         secondary: {
-            main: COLORS.GREEN,
+            main: COLORS.PINK,
         },
     },
     breakpoints: {

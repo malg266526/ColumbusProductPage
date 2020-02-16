@@ -1,8 +1,9 @@
 import React from 'react';
-import { Theme, Link } from '@material-ui/core';
+import { Link, Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { COLORS } from '../../common/consts/colors';
 import { FONT_SIZE, FONT_WEIGHT } from '../../common/consts/fonts';
+import { MODULE_SPACING } from '../../common/consts/styles';
 
 interface IProps {}
 
@@ -10,9 +11,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     root: {
         display: 'flex',
         height: 40,
-        backgroundColor: COLORS.PINK,
+        backgroundColor: COLORS.GREEN,
         alignItems: 'center',
-        padding: theme.spacing(),
+        paddingTop: theme.spacing(),
+        paddingBottom: theme.spacing(),
+        paddingLeft: theme.spacing(MODULE_SPACING),
+        paddingRight: theme.spacing(MODULE_SPACING),
     },
     link: {
         color: 'white',

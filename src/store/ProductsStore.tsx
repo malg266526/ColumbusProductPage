@@ -2,11 +2,11 @@ import { observable } from 'mobx';
 import { CURRENT_PRODUCT, PRODUCTS } from '../mocks/availableProducts';
 
 export interface IProduct {
-    name: String;
-    newPrice: Number;
-    oldPrice: Number;
-    currency: String;
-    variants?: String[];
+    name: string;
+    newPrice: number;
+    oldPrice: number;
+    currency: string;
+    variants?: string[];
 }
 
 interface IProductStore {
